@@ -8,5 +8,34 @@
   </head>
   <body>
     <img src="assets/operatorPerbandingan.png" alt="operatorPerbandingan" />
+    <div class="note">
+      <ul>
+        <li>
+          Operasi perbandingan adalah operasi untuk membandingkan dua buah data
+        </li>
+        <li>
+          Operasi perbandingan adalah operasi yang menghasilkan nilai boolean
+          (benar atau salah)
+        </li>
+        <li>Jika hasil operasinya adalah benar, maka nilainya adalah true</li>
+        <li>Jika hasil operasinya adalah salah, maka nilainya adalah false</li>
+      </ul>
+    </div>
+    <script>
+      document.writeln(
+        "<p class='note'>Kalau menggunakan == hanya membandingkian nilai/value dan mengabaikan tipe data</p>",
+      );
+      let result = 5 == "5";
+      document.writeln("<p class='result'> " + result + "</p>");
+      document.writeln(
+        "<p class='note'>Kalau menggunakan === hanya membandingkian nilai/value dan juga membandingkan tipe data</p>",
+      );
+      result = 5 === "5";
+      document.writeln("<p class='result'>" + result + "</p>");
+      result = 5 > 10;
+      document.writeln("<p class='result'> 5 > 10 = " + result + "</p>");
+      result = 5 < 10;
+      document.writeln("<p class='result'> 5 < 10 = " + result + "</p>");
+    </script>
   </body>
 </html>

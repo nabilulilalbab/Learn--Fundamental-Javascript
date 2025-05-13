@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>StringTemplate</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <script>
+      //const template = `Name : `
+      const name = "Nabiel Ulil Albab";
+      const template = `Name : ${name}`;
+      console.info(template);
+      document.writeln("<p class='note'> Expression string Template</p>");
+      const value = 80;
+      const template2 = `Name : ${name} Lulus : ${value > 75}`;
+      console.info(template2);
+      document.writeln("<p class='note'> Multiline String</p>");
+      let multiLineString = `
+      Nama : Nabil Ulil Albab
+      Hello World
+      test
+      `;
+      document.writeln(`<pre class="result">${multiLineString}</pre>`);
+    </script>
+  </body>
+</html>

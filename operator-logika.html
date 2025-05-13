@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Operator Logika</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <img src="assets/operatorLogika.png" alt="operatorLogika" />
+    <img src="assets/operator&&.png" alt="operator&&" />
+    <img src="assets/operatoratau.png" alt="operator||" />
+    <img src="assets/operatorUnary.png" alt="operatorUnary" />
+    <script>
+      const nilaiUjian = 70;
+      const nilaiAbsensi = 70;
+      const lulusUjian = nilaiUjian > 75;
+      const lulusAbsensi = nilaiAbsensi > 75;
+      const lulus = lulusUjian && lulusAbsensi;
+      document.writeln("<p class='note'>" + lulus + "</p>");
+    </script>
+  </body>
+</html>
