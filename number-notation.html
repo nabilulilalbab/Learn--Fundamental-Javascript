@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>number notation</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <p class="note">
+      JavaScript mendukung berbagai notasi angka. Secara default, angka ditulis
+      dalam basis 10 (desimal), tetapi JavaScript juga mendukung notasi biner,
+      heksadesimal, dan oktal:
+    </p>
+
+    <ul>
+      <li><strong>Desimal (basis 10):</strong> <code>123</code></li>
+      <li>
+        <strong>Heksadesimal (basis 16):</strong> <code>0xFF</code> (255 dalam
+        desimal)
+      </li>
+      <li>
+        <strong>Biner (basis 2):</strong> <code>0b10101</code> (21 dalam
+        desimal)
+      </li>
+      <li>
+        <strong>Oktal (basis 8):</strong> <code>0o10</code> (8 dalam desimal)
+      </li>
+    </ul>
+    <script>
+      // Desimal
+      document.writeln("Desimal: " + 123 + "<br>");
+
+      // Heksadesimal
+      document.writeln("Hexadecimal 0xFF: " + 0xff + "<br>");
+
+      // Biner
+      document.writeln("Binary 0b10101: " + 0b10101 + "<br>");
+
+      // Oktal
+      document.writeln("Octal 0o10: " + 0o10 + "<br>");
+    </script>
+  </body>
+</html>

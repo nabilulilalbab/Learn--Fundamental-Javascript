@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>operator math</title>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="note">
+      JavaScript mendukung banyak sekali operator Matematika untuk tipe data
+      Number, seperti :
+      <ul>
+        <li>Operator Aritmatika</li>
+        <li>Operator Augmented Assignments</li>
+        <li>Operator Unary</li>
+        <li>Dan lain-lain</li>
+      </ul>
+    </div>
+    <img src="assets/Pastedimage.png" alt="image" />
+    <br />
+    <h1>📌 JavaScript: By Value vs By Reference</h1>
+
+    <div class="note">
+      JavaScript menangani data berdasarkan tipe:
+      <strong>primitif</strong> disalin <em>by value</em>, sedangkan
+      <strong>non-primitif</strong> seperti objek disalin <em>by reference</em>.
+    </div>
+
+    <h2>✅ By Value (Salin Nilai)</h2>
+    <ul>
+      <li>
+        Berlaku untuk tipe data primitif: <code>number</code>,
+        <code>string</code>, <code>boolean</code>, <code>null</code>,
+        <code>undefined</code>, <code>symbol</code>, <code>bigint</code>.
+      </li>
+      <li>Nilai disalin, tidak terhubung satu sama lain.</li>
+      <li>Perubahan pada salinan tidak memengaruhi aslinya.</li>
+    </ul>
+
+    <div class="code">
+      <code>
+        let a = 5;<br />
+        let b = a;<br />
+        b = 10;<br />
+        console.log(a); // 5
+      </code>
+    </div>
+
+    <div class="result">
+      a = 5<br />
+      b = 10<br />
+      a tetap = 5
+    </div>
+
+    <h2>✅ By Reference (Salin Referensi)</h2>
+    <ul>
+      <li>
+        Berlaku untuk tipe non-primitif: <code>object</code>,
+        <code>array</code>, <code>function</code>.
+      </li>
+      <li>Yang disalin adalah referensinya (alamat di memori).</li>
+      <li>Perubahan pada salinan akan memengaruhi data asli.</li>
+    </ul>
+
+    <div class="code">
+      <code>
+        let obj1 = { name: "Nabiel" };<br />
+        let obj2 = obj1;<br />
+        obj2.name = "Ulil";<br />
+        console.log(obj1.name); // "Ulil"
+      </code>
+    </div>
+
+    <div class="result">
+      obj1.name = "Ulil"<br />
+      karena obj1 dan obj2 menunjuk ke objek yang sama
+    </div>
+
+    <h2>⚠️ Catatan Tambahan</h2>
+    <div class="warning">
+      - Array dan function juga termasuk object, jadi berlaku by reference.<br />
+      - Gunakan teknik <em>shallow copy</em> atau <em>deep copy</em> jika ingin
+      memutus referensi.<br />
+      - Variabel tidak menjadi alias langsung, tapi menunjuk ke data yang sama
+      di memory.
+    </div>
+    <script>
+      let result = 1 + 2;
+      document.writeln("<p class='result'>1 + 2 = " + result + "</p>");
+      let originalResult = result;
+      result -= 1;
+      document.writeln(
+        "<p class='result'>" + originalResult + " - 1 = " + result + "</p>",
+      );
+      result = originalResult;
+      result *= 2;
+      document.writeln(
+        "<p class='result'>" + originalResult + " * 2 = " + result + "</p>",
+      );
+      result = originalResult;
+      document.writeln(
+        "<img src='assets/augmentedAssignmens.jpg' alt='augmentedAssigmens'>",
+      );
+      document.writeln("<p class='note'>Augmented Assignments</p>");
+      let resultAugmented = 10;
+      document.writeln(
+        "<p class='result'> resultAugmented = " + resultAugmented + "</p>",
+      );
+
+      resultAugmented += 10;
+      document.writeln(
+        "<p class='result'> resultAugmented += 10 = " +
+          resultAugmented +
+          "</p>",
+      );
+      resultAugmented -= 10;
+      document.writeln(
+        "<p class='result'> resultAugmented -= 10 = " +
+          resultAugmented +
+          "</p>",
+      );
+      resultAugmented *= 10;
+      document.writeln(
+        "<p class='result'> resultAugmented *= 10 = " +
+          resultAugmented +
+          "</p>",
+      );
+      document.writeln("<p class='note'>Operator Unary</p>");
+      document.writeln(
+        "<img src='assets/OperatorUnary.png' alt='OperatorUnary'>",
+      );
+      let resultUnary = +1;
+      document.writeln(
+        "<p class='result'> resultUnary = " + resultUnary + "</p>",
+      );
+      resultUnary--;
+      document.writeln(
+        "<p class='result'> resultUnary = " + resultUnary + "</p>",
+      );
+      resultUnary++;
+      document.writeln(
+        "<p class='result'> resultUnary = " + resultUnary + "</p>",
+      );
+      resultUnary = -resultUnary;
+      document.writeln(
+        "<p class='result'> resultUnary = - resultUnary" + resultUnary + "</p>",
+      );
+      let nilai = -5;
+      document.writeln("<p class='result'>nilai : " + nilai + "</p>");
+      document.writeln("<p class='result'>+nilai = " + +nilai + "</p>");
+      document.writeln("<p class='result'>-nilai = " + -nilai + "</p>");
+      document.writeln("<p class='result'> -+\"5\" = " + -+"5" + "</p>");
+    </script>
+  </body>
+</html>
